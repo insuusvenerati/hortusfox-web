@@ -3,8 +3,6 @@ version: "3.8"
 services:
   app:
     image: ghcr.io/danielbrendel/hortusfox-web:latest
-    ports:
-      - "8080:80"
     volumes:
       - app_images:/var/www/html/public/img
       - app_logs:/var/www/html/app/logs
@@ -31,8 +29,6 @@ services:
       MYSQL_DATABASE: hortusfox
       MYSQL_USER: user
       MYSQL_PASSWORD: password
-    ports:
-      - "3306:3306"
     volumes:
       - db_data:/var/lib/mysql
 
